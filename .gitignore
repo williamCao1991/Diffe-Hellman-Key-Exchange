@@ -1,0 +1,15 @@
+# Ignore the virtual environment folders where libraries are installed
+.venv/
+venv/
+env/
+ENV/
+
+# Ignore Python compilation and cache artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local IDE settings
+.vscode/
+.idea/
