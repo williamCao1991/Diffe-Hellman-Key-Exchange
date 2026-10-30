@@ -12,3 +12,9 @@ Run a 16-bit exchange and Eve's attack demonstration with `python main.py`.
 Choose another size with `python main.py --bits 24`. Run the tests
 with `python -m unittest -v tests`, or collect three timing trials per size
 with `python main.py --benchmark`.
+
+
+
+AI usage:
+-understanding and using the Unittest Library
+-Figuring out the System Argg command line usage

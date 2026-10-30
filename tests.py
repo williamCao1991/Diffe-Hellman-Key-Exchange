@@ -19,7 +19,7 @@ class ProjectTests(unittest.TestCase):
     Test suite for the Diffie-Hellman key exchange protocol.
     Includes tests for mathematical operations, parameter validation,
     the full exchange protocol, and various attack scenarios.
-    used assert methods from unittest.TestCase to verify the correctness of the implementation.
+    used assert methods from unittest.TestCase to verify  the implementation.
     """
     def test_math_and_parameters(self):
         self.assertEqual(mod_exp(5, 6, 23), 8)

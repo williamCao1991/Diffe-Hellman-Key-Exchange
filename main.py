@@ -103,6 +103,7 @@ if __name__ == "__main__":
         exchange(bits)
         attack_demo()
         if "--benchmark" in sys.argv:
+            # Run benchmarks if the --benchmark flag is provided
             benchmarks()
     else:
         print("Prime size must be from 16 to 32 bits.")
