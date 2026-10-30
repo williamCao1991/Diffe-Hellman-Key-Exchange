@@ -1,36 +1,13 @@
 def modular_exponentiation(base, exponent, modulus):
-    """
-    Function to calculate base by exponent while modulus wihtout using the full computing power to iterate through the exponent.
-    
-    Args: 
-    base (int): The base number.
-    exponent (int): The exponent number.
-    modulus (int): The modulus number.
-    
-    Returns:
-    Int: Result of (base ** exponent ) modulus
-    """
-    try:
-        if modulus <= 0 or exponent < 0:
-            raise ValueError("Modulus or exponent must be a positive integer.")
-    except ValueError as e:
-        print(e)
+    """Calculate base**exponent % modulus using square-and-multiply."""
+    if (type(base) is not int or type(exponent) is not int or type(modulus) is not int or exponent < 0 or modulus <= 0):
         return "Reject"
-    
+
     result = 1 % modulus
-    base = base % modulus
-
+    base %= modulus
     while exponent > 0:
-        if exponent % 2 ==1:
-            result = (result * base) % modulus
-        exponent = exponent // 2
-        base = (base * base) % modulus
+        if exponent % 2:
+            result = result * base % modulus
+        base = base * base % modulus
+        exponent //= 2
     return result
-
-
-
-
-
-
-
-            
